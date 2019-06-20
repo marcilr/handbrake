@@ -5,6 +5,15 @@ Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+720p.txt
+  No 720p for DVDs only for blu-ray
+
+  "More or less true.  But here is the dealio for dvd's (which are by 
+  definition 480p ... no more no less).  Constant Quality encoding which 
+  the HB preset use generally dictate that the visual quality will be the 
+  same at RF 20 no matter what."
+  --forums.macrumors.com/showthread.php?t=1086363
+
 mpeg-to-mp4.txt
-  Converting mpegs to mp4 with HandBrakeCLI.
+  Converting mpegs to mp4 with HandBrakeCLI
 
