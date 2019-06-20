@@ -1,0 +1,15 @@
+packages.txt
+Created Wed Jun 19 21:21:27 AKDT 2019
+Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Handbrake related packages
+in Debian Stretch 9.8
+
+
+Packages
+========
+handbrake - Versatile DVD ripper and video transcoder
+handbrake-cli - Versatile DVD ripper and video transcoder (command line)
+handbrake-gtk - Versatile DVD ripper and video transcoder (GTK GUI)
+
