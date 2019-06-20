@@ -1,0 +1,93 @@
+720p.txt
+Created Fri Mar 27 08:34:37 AKDT 2015
+Copyright (C) 2015 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+No 720p for DVDs only for blu-ray
+
+"More or less true.  But here is the dealio for dvd's (which are by definition
+480p ... no more no less) . Constant Quality encoding which the HB preset use
+generally dictate that the visual quality will be the same at RF 20 no matter
+what."
+
+forums.macrumors.com/showthread.php?t=1086363
+
+
+format: MKV H.264
+preset: High Profile
+misc:   Loose Amamorphic setting
+rf:     20 DVD, 22 blu-ray
+
+
+Best possible Handbrake settings to rip DVDs? 720p?
+===================================================
+I have an Apple TV2.  I've been ripping DVDs with the "Apple TV 2" setting.
+What is the best possible setting on Handbrake to get the best possible
+quality (obviously don't want the files sizes to be HUGE) ? 
+
+Also, can someone explain to me what 720p is? Is it possible to rip DVDs on to
+my computer in 720p format from a DVD?
+
+My concern is making sure that my movies are still watchable in good years in
+terms of quality and in case I no longer use iTunes in the future.
+
+harpster
+macrumors regular
+Join Date: Jan 2010
+
+Quote:
+  Originally Posted by ashy7  View Post
+  For DVD's I use the Highprofile setting, change the RF to 19% and get a very
+  good quality rip.  5gb per film.
+
+I spend a great deal of time on this recently to encode my DVD collection for
+use on Plex.  I'm using the ATV2 with the Plex App and tried many Handbrake
+formats and Presets.  I also used MakeMKV which takes the DVD VOB files and
+puts them together in a container so you can watch at full quality with no
+compression.  I spent hours reading posts and doing rips and encoding tests
+because I have over 300 DVD's and don't wan't to do this twice.
+
+The MakeMKV program produced files that were essentially exact copies of the
+source DVD's.  If you have the Disk Space for storing and backing up then this
+will be the best quality but a typical DVD is 6-7 gigs so I ruled it our for
+that reason.  All my other encoding tests were done in Handbrake (latest
+version) with the original ripped VIDEO_TS folders.
+
+After doing all the research I decided to use the MKV file format in
+HandBrake.  I did try a few MP4's but the file size seemed to be a little
+larger for the same RF (constant quality) number.  Anyway I decided MKV H.264
+was the way to go for me.  Not sure if the ATV2 will play that natively and
+like I said I'm using the Plex App. (on jail-broken ATV2).
+
+After doing a lot of comparisons of quality and video settings I decided to go
+with the High Profile Preset because it produces a smaller file size with very
+good quality (but longer encoding time).  That also uses the Loose Amamorphic
+setting, and then I manually change the Format from MP4 to MKV.  Finally I use
+a RF of 19.25 not sure why as it's hard to tell the difference between 18 and
+the recommended 20.  But it works for me.  The encoded file sizes are
+averaging between 1.3 and 2.5 gigs and when I watch the movie it's hard to
+tell the difference from the original DVD.  I haven't found a reliable way to
+do a batch convert on the mac, I tried DropFolders but it didn't work for me.
+So I load up the HandBrake Queue with about 30 movies at night and they are
+done by noon the next day.  On a iMac27 i7 I'm getting encoding frame rates
+averaging 90fps or so depending on the DVD.
+
+You can spend way too much time with this and get way over critical.  Just
+pick a Handbrake preset and do a few tests on the device(s) you want to view
+the video on and then go from there.  One thing to watch out for is that
+HandBrake doesn't always select the correct chapter to encode.  Some DVD's
+have Fullscreen & Widescreen versions on the same disc and other times it will
+just select the wrong chapter all together.  Because I'm doing so many movies
+now to enter my collection, I just do the encoding and then fix it later if I
+see any problems.
+
+forums.macrumors.com/showthread.php?t=1086363
+
+
+Links
+=====
+Best Handbrake Settings + NO QUALITY LOSS!
+https://www.youtube.com/watch?v=EKPZKgGBIKM
+
+Best possible Handbrake settings to rip DVDs? 720p?
+http://forums.macrumors.com/showthread.php?t=1086363
