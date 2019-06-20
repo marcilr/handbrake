@@ -5,6 +5,18 @@ Copyright (C) 2019 by Raymond E. Marcil <marcilr@gmail.com>
 
 Filelist
 ========
+00INSTALL/
+  Installationm of handbrake
+
 packages.txt
   Handbrake related packages
   in Debian Stretch 9.8
+
+handbrake.txt
+  handbrake - Versatile DVD ripper and video transcoder
+
+links.txt
+  Handbrake related links
+
+packages.txt
+  Handbrake related packages
