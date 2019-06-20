@@ -1,0 +1,76 @@
+handbrake.txt
+Created Tue May  8 15:03:20 AKDT 2012
+Copyright (C) 2013 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+HandBrake is a general-purpose, open-source, cross-platform, multithreaded video transcoder
+software application.[4]  HandBrake was originally developed by Eric "titer" Petit in 2003 as a
+general-purpose video transcoder to make ripping a film from a DVD to a data storage device
+easier.  Since then, it has undergone many changes and revisions and become widely popular amongst
+film enthusiasts.[5]
+
+HandBrake makes use of many LGPL libraries from the Linux platform.[6]
+
+wikipedia.org/
+
+
+HandBrake is a multi-threaded DVD to MPEG-4 ripper and converter.  It can encode directly from DVDs
+(even encrypted ones) or from VIDEO_TS folders.  AC3, LPCM, and MPEG audio tracks are supported.
+The output can be contained in MP4, AVI, or OGM files, and the output audio is encoded in either
+AAC, MP3, or Vorbis.  Other features include support for 2-pass encoding, encoding of two audio
+tracks, a bitrate calculator, and deinterlacing, cropping, and scaling of the original picture.
+
+http://freecode.com/
+
+
+
+List handbrake profiles:
+$ HandBrakeCLI --preset-list
+
+
+
+Thu Jan 31 12:36:14 AKST 2013
+=============================
+Today I learned that rather than combining the vobs, stored under say WEDDING_CRASHERS/VIDEO_TS/*,
+into one vob using, using ~/bin/vob-combine script, it is better to just point handbrake to 
+the VIDEO_TS/ directory itself.  Handbrake does a better job of eliminating the initial menu when 
+it points to VIDEO_TS/ directory rather than single vob.
+
+This needs to go into the transcoding document.
+
+
+Mon Jan 14 20:39:21 AKST 2013
+=============================
+Whilst winter mountain biking with Jason Guild, Sunday January 13, 2013 around Campbell 
+Airstrip we discussed transcoding DVDs.  I mentioned I had recently used makemkv to easily,
+i.e. on-click, create *.mkv files from DVDs.  He asked if I had even used handbrake for
+transcoding DVDs.  Advised that I had not in quite some time.
+
+Seemed a good time to check it out again.  Find no handbrake in the debian distro though.
+Need to determine use of handbrake on debian squeeze.
+
+The current release, from download page, is version 0.9.8 
+
+
+Links
+=====
+[4] "Details". HandBrake. Retrieved 6 August 2011.
+http://handbrake.fr/details.php
+
+[5] Hester, Rodney; Long, Chris (17 March 2007).
+"History of HandBrake". HandBrake. Retrieved 6 August 2011.
+https://trac.handbrake.fr/wiki/HandBrakeHistory
+
+[6] "Credits in Trunk". HandBrake. 20 June 2011. Retrieved 6 August 2011.
+https://trac.handbrake.fr/browser/trunk/CREDITS
+
+Download Handbrake
+http://handbrake.fr/downloads.php
+
+HandBrake
+http://freecode.com/search?q=handbrake&submit=Search
+http://handbrake.fr/
+
+HandBrake
+From Wikipedia, the free encyclopedia
+http://en.wikipedia.org/wiki/HandBrake
