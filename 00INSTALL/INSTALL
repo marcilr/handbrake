@@ -1,0 +1,424 @@
+INSTALL
+Created Mon Jan 14 20:51:57 AKST 2013
+Copyright (C) 2013 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Installation of HandBrake
+
+
+Sat Nov 16 09:01:27 AKST 2013
+=============================
+Installing on debian wheezy amd64 7.2
+
+1. /etc/apt/sources.list has:
+deb ftp://ftp.deb-multimedia.org wheezy main non-free
+
+2. Update wheezy:
+# aptitude update
+# aptitude upgrade
+
+3. Install handbrake-gtk dependencies:
+libmkv0 - Alternitave to the official libmatroska/libebml libraries.
+libmp4v2-2 - MP4 container library - runtime file
+
+# aptitude install libmkv0 libmp4v2-2
+
+Installed:
+  libmkv0_0.6.5.1-dmo3_amd64.deb
+  libmp4v2-2_2%3a2.0.0-dmo2_amd64.deb
+
+3. Install handbrake packages from file:
+
+malachite:/usr/local/debs/handbrake# dpkg -i handbrake-gtk_0.9.8+git20121007-dmo6_amd64.deb
+(Reading database ... 196180 files and directories currently installed.)
+Preparing to replace handbrake-gtk 0.9.8+git20121007-dmo6 \
+  (using handbrake-gtk_0.9.8+git20121007-dmo6_amd64.deb) ...
+Unpacking replacement handbrake-gtk ...
+Setting up handbrake-gtk (0.9.8+git20121007-dmo6) ...
+Processing triggers for hicolor-icon-theme ...
+Processing triggers for desktop-file-utils ...
+Processing triggers for gnome-menus ...
+malachite:/usr/local/debs/handbrake#
+
+malachite:/usr/local/debs/handbrake# dpkg -i handbrake-cli_0.9.8+git20121007-dmo6_amd64.deb
+Selecting previously unselected package handbrake-cli.
+(Reading database ... 196180 files and directories currently installed.)
+Unpacking handbrake-cli (from handbrake-cli_0.9.8+git20121007-dmo6_amd64.deb) ...
+Setting up handbrake-cli (0.9.8+git20121007-dmo6) ...
+root@malachite:/usr/local/debs/handbrake# 
+
+root@malachite:/usr/local/debs/handbrake# dpkg -i handbrake_0.9.8+git20121007-dmo6_all.deb
+Selecting previously unselected package handbrake.
+(Reading database ... 196184 files and directories currently installed.)
+Unpacking handbrake (from handbrake_0.9.8+git20121007-dmo6_all.deb) ...
+Setting up handbrake (0.9.8+git20121007-dmo6) ...
+root@malachite:/usr/local/debs/handbrake#
+
+Appears to have worked...
+
+root@malachite:~# type HandBrakeCLI
+HandBrakeCLI is /usr/bin/HandBrakeCLI
+root@malachite:~#
+
+malachite:/usr/local/debs/handbrake# dpkg --info handbrake_0.9.8+git20121007-dmo6_all.deb
+...
+ new debian package, version 2.0.
+ size 10302 bytes: control archive=702 bytes.
+     725 bytes,    19 lines      control              
+     146 bytes,     2 lines      md5sums              
+ Package: handbrake
+ Source: handbrake-dmo
+ Version: 0.9.8+git20121007-dmo6
+ Architecture: all
+...
+malachite:/usr/local/debs/handbrake# 
+
+Doesn't look like handbrake package has crap in it.
+
+
+
+Mon Jan 14 20:57:54 AKST 2013
+=============================
+Installing on debian sqeeze amd64 6.0.6
+
+1. Update /etc/apt/sources.list with:
+
+deb http://www.deb-multimedia.org squeeze main non-free
+  or
+deb ftp://ftp.deb-multimedia.org squeeze main non-free
+  or
+deb http://www.deb-multimedia.org stable main non-free
+  or
+deb ftp://ftp.deb-multimedia.org stable main non-free
+
+Updated /etc/apt/sources.list with:
+#
+# deb-multimedia.org for installation of HandBrake and dependencies.
+#
+# Links
+# =====
+# deb-multimedia.org
+# http://deb-multimedia.org/
+#
+deb ftp://ftp.deb-multimedia.org squeeze main non-free
+
+2. Updated repos with:
+# aptitude update
+...
+W: GPG error: ftp://ftp.deb-multimedia.org squeeze Release: The following signatures couldn't be
+verified because the public key is not available: NO_PUBKEY 07DC563D1F41B907
+
+Obvious need deb-multimedia.org public key:
+
+# aptitude install deb-multimedia-keyring
+The following NEW packages will be installed:
+  deb-multimedia-keyring 
+0 packages upgraded, 1 newly installed, 0 to remove and 10 not upgraded.
+Need to get 15.3 kB of archives. After unpacking 45.1 kB will be used.
+WARNING: untrusted versions of the following packages will be installed!
+
+Untrusted packages could compromise your system's security.
+You should only proceed with the installation if you are certain that
+this is what you want to do.
+
+  deb-multimedia-keyring 
+
+Do you want to ignore this warning and proceed anyway?
+To continue, enter "Yes"; to abort, enter "No": Yes
+Get:1 ftp://ftp.deb-multimedia.org/ squeeze/main deb-multimedia-keyring all \
+2012.05.10-dmo3 [15.3 kB]
+Fetched 15.3 kB in 3s (4,971 B/s)                
+Selecting previously deselected package deb-multimedia-keyring.
+(Reading database ... 182857 files and directories currently installed.)
+Unpacking deb-multimedia-keyring (from .../deb-multimedia-keyring_2012.05.10-dmo3_all.deb) ...
+Setting up deb-multimedia-keyring (2012.05.10-dmo3) ...
+OK
+
+#
+
+Try repo update again:
+# aptitude update
+
+Upgrade current packages:
+# aptitude upgrade
+Resolving dependencies...                
+The following NEW packages will be installed:
+  libartsc0{a} libavutil50{a} libbs2b0{a} libdirac-decoder0{a} libfaac0{a} libggi-target-x{a}
+  libggi2{a}  libggiwmh0{a} libggiwmh0-target-x{a} libgii1{a} libgii1-target-x{a} libmp3lame0{a}
+  librtmp0{a}  libva-x11-1{a} libva1{a} libvdpau1{a} libx264-112{a} libx264-118{a} libxvidcore4{a} 
+  mplayer-skin-blue{a} 
+The following packages will be REMOVED:
+  libopenal1{u} 
+The following packages will be upgraded:
+  libavcodec52 libavformat52 libdrm-intel1 libdrm-radeon1 libdrm2 libpostproc51 libswscale0 libvpx0 
+  mencoder mplayer 
+10 packages upgraded, 20 newly installed, 1 to remove and 0 not upgraded.
+Need to get 20.4 MB of archives. After unpacking 25.6 MB will be used.
+Do you want to continue? [Y/n/?] Y
+Get:1 http://ftp.us.debian.org/debian/ squeeze/main libartsc0 amd64 1.5.9-3+b2 [17.5 kB]
+Get:2 http://ftp.us.debian.org/debian/ squeeze/main libdirac-decoder0 amd64 1.0.2-3 [324 kB]
+Get:3 http://ftp.us.debian.org/debian/ squeeze/main libgii1 amd64 1:1.0.2-4 [301 kB]
+Get:4 ftp://ftp.deb-multimedia.org/ squeeze/main libbs2b0 amd64 3.1.0-0.2 [12.9 kB]
+Get:5 http://ftp.us.debian.org/debian/ squeeze/main libggi2 amd64 1:2.2.2-5 [376 kB]
+Get:6 http://ftp.us.debian.org/debian/ squeeze/main libggiwmh0 amd64 0.3.2-2 [25.8 kB]
+Get:7 http://ftp.us.debian.org/debian/ squeeze/main librtmp0 amd64 2.3-2 [55.2 kB]
+Get:8 http://ftp.us.debian.org/debian/ squeeze/main libvdpau1 amd64 0.4.1-2 [32.2 kB]
+Get:9 http://ftp.us.debian.org/debian/ squeeze/main mplayer-skin-blue all 1.6-2 [221 kB]
+Get:10 http://ftp.us.debian.org/debian/ squeeze/main libgii1-target-x amd64 1:1.0.2-4 [85.6 kB]
+Get:11 http://ftp.us.debian.org/debian/ squeeze/main libggi-target-x amd64 1:2.2.2-5 [165 kB]
+Get:12 http://ftp.us.debian.org/debian/ squeeze/main libggiwmh0-target-x amd64 0.3.2-2 [18.0 kB]
+Get:13 ftp://ftp.deb-multimedia.org/ squeeze/main libfaac0 amd64 1.28-0.3 [41.8 kB]
+Get:14 ftp://ftp.deb-multimedia.org/ squeeze/main libmp3lame0 amd64 3.98.4-0.0 [261 kB]
+Get:15 ftp://ftp.deb-multimedia.org/ squeeze/main libvpx0 amd64 0.9.7.p1-2.squeeze2 [278 kB]
+Get:16 ftp://ftp.deb-multimedia.org/ squeeze/main libx264-112 amd64 1:0.svn20110115-0.0 [503 kB]
+Get:17 ftp://ftp.deb-multimedia.org/ squeeze/main libxvidcore4 amd64 2:1.2.2-0.1 [264 kB]
+Get:18 ftp://ftp.deb-multimedia.org/ squeeze/main mplayer amd64 2:1.0~rc3++svn20100804-0.2squeeze1 \
+[6,280 kB]
+Get:19 ftp://ftp.deb-multimedia.org/ squeeze/main libavutil50 amd64 5:0.7.13-dmo2 [68.3 kB]
+Get:20 ftp://ftp.deb-multimedia.org/ squeeze/main libavformat52 amd64 5:0.7.13-dmo2 [463 kB]
+Get:21 ftp://ftp.deb-multimedia.org/ squeeze/main libdrm2 amd64 2.4.23-0.0 [432 kB]
+Get:22 ftp://ftp.deb-multimedia.org/ squeeze/main libva-x11-1 amd64 1.0.7-0.0 [16.5 kB]
+Get:23 ftp://ftp.deb-multimedia.org/ squeeze/main libva1 amd64 1.0.7-0.0 [39.5 kB]
+Get:24 ftp://ftp.deb-multimedia.org/ squeeze/main libx264-118 amd64 3:0.118.2085+git8a62835-0.1+1 \
+[584 kB]
+Get:25 ftp://ftp.deb-multimedia.org/ squeeze/main libavcodec52 amd64 5:0.7.13-dmo2 [2,906 kB]
+Get:26 ftp://ftp.deb-multimedia.org/ squeeze/main libdrm-intel1 amd64 2.4.23-0.0 [433 kB]
+Get:27 ftp://ftp.deb-multimedia.org/ squeeze/main libdrm-radeon1 amd64 2.4.23-0.0 [421 kB]
+Get:28 ftp://ftp.deb-multimedia.org/ squeeze/main libpostproc51 amd64 5:0.7.13-dmo2 [30.1 kB]
+Get:29 ftp://ftp.deb-multimedia.org/ squeeze/main libswscale0 amd64 5:0.7.13-dmo2 [109 kB]
+Get:30 ftp://ftp.deb-multimedia.org/ squeeze/main mencoder amd64 2:1.0~rc3++svn20100804-0.2squeeze1 \
+[5,670 kB]
+
+Pulled in 30-12 = 18 updates from deb-multimedia.org/  Lets hope it's stable:)
+
+Try repo update again:
+# aptitude update
+
+Try repo upgrade:
+# aptitude upgrade
+
+Looks good!
+
+3. Search for handbrake packages:
+$ apt-cache search handbrake
+handbrake-cli - versatile DVD ripper and video transcoder (command line)
+handbrake-gtk - versatile DVD ripper and video transcoder (GTK GUI)
+$
+
+4. Install handbrake-gtk:
+# aptitude install handbrake-gtk
+The following NEW packages will be installed:
+  handbrake-gtk libmkv0{a} libsamplerate0{a} 
+0 packages upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 5,055 kB of archives. After unpacking 10.8 MB will be used.
+Do you want to continue? [Y/n/?] Y
+Get:1 http://ftp.us.debian.org/debian/ squeeze/main libsamplerate0 amd64 0.1.7-3 [1,349 kB]
+Get:2 ftp://ftp.deb-multimedia.org/ squeeze/main libmkv0 amd64 0.6.4.1-0.0 [16.6 kB]
+Get:3 ftp://ftp.deb-multimedia.org/ squeeze/main handbrake-gtk amd64 0.9.5-0.1 [3,689 kB]
+Fetched 5,055 kB in 10s (477 kB/s)                                                                                                                       
+Selecting previously deselected package libsamplerate0.
+(Reading database ... 183269 files and directories currently installed.)
+Unpacking libsamplerate0 (from .../libsamplerate0_0.1.7-3_amd64.deb) ...
+Selecting previously deselected package libmkv0.
+Unpacking libmkv0 (from .../libmkv0_0.6.4.1-0.0_amd64.deb) ...
+Selecting previously deselected package handbrake-gtk.
+Unpacking handbrake-gtk (from .../handbrake-gtk_0.9.5-0.1_amd64.deb) ...
+Processing triggers for hicolor-icon-theme ...
+Processing triggers for desktop-file-utils ...
+Processing triggers for gnome-menus ...
+Setting up libsamplerate0 (0.1.7-3) ...
+Setting up libmkv0 (0.6.4.1-0.0) ...
+Setting up handbrake-gtk (0.9.5-0.1) ...
+
+#
+
+Looks good.
+
+5. HandBrake is now available under Applications > Sound & Video in gnome.
+
+In HandBrake Help > About:
+  HandBrake rev3736 (x86_64)
+
+Will generate MP4 or MKV
+
+6. Test 
+i. Dropped in Adam & Eve Hello Nurse and The Perfect Secretary: Training Day disk
+ii. Selected File > /dev/sr1 - Hellonurse Perfectsexretary2
+This detected the disk and displayed details:
+
+
+Source: Hellonurse Perfectsexretary2
+  Title: 2 - 02h27m20s
+  Chapters 1 through 92 Duration: 02:27:20
+
+Destination
+  File: Hellonurse Perfectsexretary2.m4v
+  Videos
+  Format: MP4 (defaults to MP4 over MKV)
+  <unchecked> iPod 5G Support
+  <unchedked> Web optimized
+  <unchecked> Large file (>4GB)
+
+Summary
+  Source Picture Parameters
+    Dimensions:         720 x 480
+    Aspect:             4:3
+    Frame Rate:         29.97
+
+  Cropping
+    Autocrop:           On
+    Crop:               0:0:2:0
+    Crop Dimensions:    718 x 480
+
+  Scaling
+    Scale Dimensions:   718 x 480
+    Optimal for Source: On
+    Anamorphic          Strict
+
+Video
+  Video Codec:          H.264 (x264)
+  Framerate:            Same as source
+
+Audio
+  Track:                Unknown (AC3)(2.0ch)
+  Codec:                AAC (faac)
+  Bitrate:              160
+  Sample Rate:          Same as source
+  Mix:                  Stereo
+  DRC:                  Off
+
+Subtitles
+  Track: Any
+
+H.264
+  ...
+  Many options.
+  ...
+
+Chapters
+  x Chapter Markers
+
+  Index   Duration   Title
+  1       00:00:51   Chapter 1
+  ...
+  92      00:1:30    Chapter 92 
+
+iii. Assume good.
+click Start
+
+On bottom get Encoding 1.76% (81.44 fps, avg 135.12 fps, ETA 00h34m56s)     0 encode(s) pending
+On bottom get Encoding 3.54% (63.77 fps, avg  95.10 fps, ETA 00h34m56s)     0 encode(s) pending
+...
+
+Wow - HandBrake is the only app I've seen that soaks up nearly 100% of 4 cpus.
+
+$ cat /dev/proc/cpuinfo
+...
+processor       : 0
+vendor_id       : AuthenticAMD
+cpu family      : 16
+model           : 2
+model name      : AMD Phenom(tm) 9350e Quad-Core Processor
+stepping        : 3
+cpu MHz         : 2000.000
+cache size      : 512 KB
+...
+3 more processors
+...
+Rip Done!
+$
+
+iv. Remove space from resultant filename:
+$ mv ~/Videos/Hellonurse\ Perfectsexretary2.m4v ~/Videos/Hellonurse-Perfectsexretary2.m4v 
+$ du -m ~/Videos/Hellonurse-Perfectsexretary2.m4v
+1915
+$
+
+v. Take checksum:
+$ md5sum ~/Videos/Hellonurse-Perfectsexretary2.m4v > ~/Videos/Hellonurse-Perfectsexretary2.m4v.md5
+
+vi. Play with vlc
+$ vlc ~/Videos/Hellonurse-Perfectsexretary2.m4v &
+2:27:29 hours long
+
+Looks great!
+
+Noticed that the activity logs are under:
+  /home/marcils/.config/ghb/Activity.log.17270
+
+Definitely using libdvdcss, libdvdnav, and libdvdread.
+
+
+$ du -m ~/Videos/HELLONURSE_PERFECTSEXRETARY2/
+6614    /home/marcilr/Videos/HELLONURSE_PERFECTSEXRETARY2/
+
+$ du -m ~/Videos/
+
+$ du -m ~/Videos/Hellonurse-Perfectsexretary2.m4v
+1915    /home/marcilr/Videos/Hellonurse-Perfectsexretary2.m4v
+
+$ bc
+6614 - 1915
+4699
+
+Wow the mpeg4 is a solid 4.7GB smaller.
+
+
+Safest Way to Install Handbrake-GTK in Stable?
+==============================================
+
+Re: Safest Way to Install Handbrake-GTK in Stable?
+--------------------------------------------------
+Postby cynwulf - 2012-06-24 12:08 
+
+You can see here which additional deb-multimedia packages are required as dependencies:
+  http://deb-multimedia.org/dists/stable/main/binary-i386/package/handbrake-gtk
+
+If you don't want to add the repo, download all the .debs to one directory and
+  # dpkg -i *.deb
+
+And install any dependencies from the official repos which it complains about.
+
+If you don't want to get it from deb-multimedia, you could grab the upstream source, build it
+and package it yourself.
+
+
+Re: Safest Way to Install Handbrake-GTK in Stable?
+--------------------------------------------------
+Postby Mr James - 2012-06-24 15:09
+Oh for the love of...
+I've installed and used handbrake-gtk, handbrake-cli, and a shit load of other deb-multimedia
+goodness ever since I came to Debian (when Squeeze was still Testing) and have yet to see any
+issues whatsoever.  Solid as a rock.
+
+deb-multimedia is a quality repo frowned upon because it's contents are non free.
+E8400 P5QL 4GB 9600GT 1TB 23" 1920x1080 Debian/Wheezy Awesome AMD64
+
+
+Re: Safest Way to Install Handbrake-GTK in Stable?
+--------------------------------------------------
+Postby dusty_fox » 2012-06-25 05:30
+
+    Mr James wrote:
+    deb-multimedia is a quality repo
+
+I definitely agree with that. That is the first repo that I add to any new debian installation.
+I've transcoded hundreds of videos with their handbrake-gtk.
+
+
+debian.net/
+
+
+Links
+=====
+deb-multimedia.org/ home
+Had /etc/apt/sources.list info for HandBrake
+http://deb-multimedia.org/
+
+deb-multimedia.org/ amd64 packages
+http://deb-multimedia.org/dists/stable/main/binary-amd64/
+
+Safest Way to Install Handbrake-GTK in Stable?
+deb-multimedia is a quality repo frowned upon because it's contents are non free.
+http://forums.debian.net/viewtopic.php?f=6&t=81118
+
