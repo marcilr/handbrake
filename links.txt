@@ -1,0 +1,112 @@
+links.txt
+Created Mon Jan 14 20:42:05 AKST 2013
+Copyright (C) 2013 by Raymond E. Marcil <marcilr@gmail.com>
+
+
+Handbrake related links
+
+
+
+Links
+=====
+About HandBrake
+http://handbrake.fr/details.php
+
+Best Handbrake Settings + NO QUALITY LOSS!
+https://www.youtube.com/watch?v=EKPZKgGBIKM
+
+Best possible Handbrake settings to rip DVDs? 720p?
+http://forums.macrumors.com/showthread.php?t=1086363
+
+Calculate the Perfect Handbrake Video Encoding Settings for Your Device
+http://lifehacker.com/5610568/calculate-the-perfect-handbrake-video-encoding-settings-for-your-device
+
+CLI Magic: Porting DVDs with HandBrake
+By Mayank Sharma on April 24, 2006 (8:00:00 AM)
+http://archive09.linux.com/feature/114130
+
+Containers
+Has fine mp4 vs. m4v section
+Has solid mp4 and mkv descriptions and attributes
+i.e. They *are* the same thing
+https://trac.handbrake.fr/wiki/Containers
+
+CREDITS file for HandBrake <http://handbrake.fr/>
+https://trac.handbrake.fr/browser/trunk/CREDITS
+
+deb-multimedia.org/ home
+Had /etc/apt/sources.list info for HandBrake
+http://deb-multimedia.org/
+
+deb-multimedia.org/ amd64 packages
+http://deb-multimedia.org/dists/stable/main/binary-amd64/
+
+deb-multimedia.org/
+handbrake (0.9.8+git20121007-dmo6) - Stable/Wheezy
+http://deb-multimedia.org/pool/main/h/handbrake-dmo/handbrake_0.9.8+git20121007-dmo6_all.deb
+http://deb-multimedia.org/dists/stable/main/binary-amd64/package/handbrake
+
+Details
+HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.
+http://handbrake.fr/details.php
+
+Encoding Video For Mobile Devices?
+Good HandBrake & h.264 info
+http://ask.slashdot.org/story/10/07/25/1654219/Encoding-Video-For-Mobile-Devices?art_pos=22
+
+HandBrake
+http://freecode.com/search?q=handbrake&submit=Search
+http://handbrake.fr/
+
+HandBrake
+From Wikipedia, the free encyclopedia
+http://en.wikipedia.org/wiki/HandBrake
+
+HandBrake - h.264 library of choice.
+"A large portion of these speed, size, and quality improvements come to
+us for free, from the x264 project. The past year, like every year, has 
+seen some massive improvements for that video encoding engine. As always, 
+it has been further hand-optimized for better performance. But it has 
+also gained new features like macroblock tree rate control  and weighted 
+P-Frame prediction. The end result? Better picture quality, at a smaller 
+size, faster."
+http://handbrake.fr/
+
+HandBrake Containers
+MP4 vs. M4V (same thing)
+https://trac.handbrake.fr/wiki/Containers
+
+HandBrake Documentation & Help
+https://trac.handbrake.fr/wiki
+
+HandBrake Download
+http://handbrake.fr/downloads.php
+
+HandBrake FAQ
+https://trac.handbrake.fr/wiki/SupportFAQ
+
+HandBrake Feature Documentation and User Guides
+https://trac.handbrake.fr/wiki/HandBrakeGuide
+
+HandBrake Forums and IRC
+https://trac.handbrake.fr/wiki/IRC
+
+HandBrake HomePage
+http://handbrake.fr/
+
+Safest Way to Install Handbrake-GTK in Stable?
+This put me onto handbrake-gtk in deb-multimedia.org/ repo.
+http://forums.debian.net/viewtopic.php?f=6&t=81118
+
+The History of HandBrake
+HandBrake was started in 2003 by "titer".  He continued to be the primary developer through
+April 2006, when the last official Subversion revision was checked in. 
+https://trac.handbrake.fr/wiki/HandBrakeHistory
+
+pineapplecli.sh 0.5.5
+Integrated Test Environment for HandBrakeCLI
+Interesting script.
+http://pineapplecli.googlecode.com/svn/trunk/pineapplecli.sh
+
+Using HandBrakeCLI
+https://trac.handbrake.fr/wiki/CLIGuide
