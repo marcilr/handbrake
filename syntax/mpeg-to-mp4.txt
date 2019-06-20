@@ -1,0 +1,33 @@
+mpeg-to-mp4.txt
+Created Sat Sep 14 21:01:41 AKDT 2013
+Copyright (C) 2013 by Raymond E. Marcil <marcilr@gmail.com>
+
+http://handbrake.fr is a nice high level tool with a lot of useful presets for
+mp4 for iPod, PS3, ... with both GUI and CLI interfaces for Linux, Windows and
+Mac OS X.
+
+It comes with its own dependencies as a single statically linked fat binary so
+you have all the x264 / aac codecs included.
+
+$ HandBrakeCLI -Z Universal -i myinputfile.mov -o myoutputfile.mp4
+
+To list all the available presets:
+
+$ HandBrakeCLI -z
+
+stackoverflow.com/
+
+
+Example
+=======
+HandBrakeCLI -Z Universal -i foo.mpeg -o foo.m4v
+
+
+Remember that mp4 and m4v are the same format.
+Apple's iTunes likes the m4v extension.
+
+
+Links
+=====
+Convert a video to MP4 (H.264/AAC) with ffmpeg
+http://stackoverflow.com/questions/1839841/convert-a-video-to-mp4-h-264-aac-with-ffmpeg
